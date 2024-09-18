@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl25fhm25rge6"]
+
+[ext_resource type="Texture2D" uid="uid://bnbyyglm4ym80" path="res://assets/sprites/tiles/00Atlas.png" id="1_0x5ee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8a77y"]
+size = Vector2(48, 14)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0x5ee")
+region_enabled = true
+region_rect = Rect2(215.425, 16.2846, 50.9442, 15.524)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8a77y")
+one_way_collision = true

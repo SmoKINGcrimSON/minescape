@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://57pski2wvlnq"]
+
+[ext_resource type="Texture2D" uid="uid://cv7kjo1wc341q" path="res://assets/sprites/main_menu/background.jpg" id="1_qo4ao"]
+[ext_resource type="Script" path="res://scripts/main_menu/main_menu.gd" id="1_vv6l1"]
+[ext_resource type="FontFile" uid="uid://dgldg4gx4qrn6" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_picbu"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vv6l1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qo4ao")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -15
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_picbu")
+theme_override_font_sizes/font_size = 64
+text = "MINE ESCAPE"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Separator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="cargar_partida" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_picbu")
+theme_override_font_sizes/font_size = 30
+text = "CARGAR PARTIDA"
+
+[node name="crear_partida" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_picbu")
+theme_override_font_sizes/font_size = 30
+text = "CREAR PARTIDA"
+
+[node name="opciones" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_picbu")
+theme_override_font_sizes/font_size = 30
+text = "OPCIONES"
+
+[node name="salir" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_picbu")
+theme_override_font_sizes/font_size = 30
+text = "SALIR"
